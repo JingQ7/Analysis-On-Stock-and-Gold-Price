@@ -131,14 +131,8 @@ fval (float) – pvalue for F test'''
 #-----------------------------------------------------------------
 
 '''
-#9. resid
-resid = fitMod.resid
-result1 = {'fitMod':fitMod,'resid':resid}
-result = breaks_cusumolsresid(resid)
-print(result)
+#9. VECM model
 
-#-----------------------------------------------------------------
-#VECM model
 #built data
 newdata = {'goldPrice': gold_data,'stockIndex': stock_data}
 newdataSeries = pd.DataFrame(newdata)
