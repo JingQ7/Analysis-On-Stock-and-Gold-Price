@@ -9,7 +9,7 @@ from statsmodels.tsa.vector_ar.vecm import VECM, select_order, coint_johansen
 from statsmodels.stats.diagnostic import acorr_breusch_godfrey, breaks_cusumolsresid
 
 
-#0. get data from csv file and get average
+#0. get data from csv file and get average, data cleaning
 data = pd.read_csv('data.csv')
 oldgold = data['Gold Price']
 gold_data = oldgold.replace([np.inf, -np.inf], np.nan).dropna()
@@ -18,7 +18,7 @@ oldstock = data['Stock Index']
 stock_data = oldstock.replace([np.inf, -np.inf], np.nan).dropna()
 
 #-----------------------------------------------------------------
-#1.check stationary-visual test
+#1. data visualization
 goldSeries = pd.Series(gold_data)
 goldSeries.plot()
 pyplot.show()
@@ -122,6 +122,7 @@ print(resid)
 
 acorr_result = acorr_breusch_godfrey(resid, nlags=2)
 print(acorr_result)
+
 '''Returns:	
 lm (float) – Lagrange multiplier test statistic
 lmpval (float) – p-value for Lagrange multiplier test
@@ -130,7 +131,7 @@ fval (float) – pvalue for F test'''
 
 #-----------------------------------------------------------------
 
-'''
+''' Take another model into consideration
 #9. VECM model
 
 #built data
