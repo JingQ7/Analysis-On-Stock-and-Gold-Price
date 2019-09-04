@@ -11,5 +11,5 @@ The tools that used in this project are Python, numpy, pandas, statsmodels, matl
 ## Statistical Techniques
 To achieve the aims of the study, several statistical techniques are used such as Unit Root Augmented Dickey-Fuller test, Johnson Co-integration Test and Vector Autoregression Model (VAR). Lagrange Multiplier Test and Stability Test will also be imposed to test the accuracy of the model.  
 
-## Result
+## Results
 The result shows that there is no long-term relationship between the stock index and the gold price and there is no short-term relationship between the two variables either.
