@@ -1,4 +1,4 @@
-# pyAnalysisOnStockAndGoldPrice
+# Analysis On Stock and Gold Price
 
 The objective of this research paper is to examine the relationship between the gold price and the Shanghai Composite Index (SSE). 
 
